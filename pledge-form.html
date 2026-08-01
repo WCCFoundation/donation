@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pledge Form | Westborough Community Center Foundation</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:   #1B3A6B;
+      --maroon: #7A1F31;
+      --gold:   #C8993A;
+      --light:  #F5F7FA;
+      --white:  #FFFFFF;
+      --text:   #2D2D2D;
+      --muted:  #6B7280;
+    }
+
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      color: var(--text);
+      background: var(--light);
+      line-height: 1.6;
+      padding: 30px 16px;
+    }
+
+    .sheet {
+      max-width: 640px;
+      margin: 0 auto;
+      background: var(--white);
+      border: 1px solid #dde2ea;
+      border-radius: 8px;
+      padding: 40px 44px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    header img {
+      max-width: 200px;
+      height: auto;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 1.4rem;
+      color: var(--navy);
+      font-weight: normal;
+      margin: 10px 0 4px;
+      font-family: Arial, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .dateline {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+
+    .quote {
+      font-style: italic;
+      color: var(--navy);
+      text-align: center;
+      font-size: 1rem;
+      margin-bottom: 26px;
+      padding: 0 10px;
+    }
+
+    .mail-to {
+      font-family: Arial, sans-serif;
+      font-size: 0.92rem;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .mail-to strong { color: var(--navy); }
+
+    h2 {
+      font-family: Arial, sans-serif;
+      font-size: 0.85rem;
+      color: var(--maroon);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin: 26px 0 12px;
+      border-bottom: 2px solid var(--maroon);
+      padding-bottom: 6px;
+    }
+
+    .amount-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px 22px;
+      font-family: Arial, sans-serif;
+      font-size: 0.95rem;
+      margin-bottom: 6px;
+    }
+    .amount-row span { white-space: nowrap; }
+
+    .field-line {
+      font-family: Arial, sans-serif;
+      font-size: 0.92rem;
+      margin-bottom: 18px;
+    }
+    .field-line .blank {
+      display: inline-block;
+      border-bottom: 1px solid var(--muted);
+      min-width: 260px;
+      margin-left: 8px;
+    }
+
+    .thanks {
+      text-align: center;
+      margin-top: 20px;
+      color: var(--maroon);
+      font-weight: bold;
+      font-family: Arial, sans-serif;
+    }
+
+    .fine-print {
+      font-family: Arial, sans-serif;
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-align: center;
+      margin-top: 28px;
+      line-height: 1.8;
+    }
+
+    .print-bar {
+      max-width: 640px;
+      margin: 0 auto 16px;
+      text-align: right;
+    }
+    .print-bar button {
+      font-family: Arial, sans-serif;
+      font-size: 0.85rem;
+      font-weight: bold;
+      color: var(--white);
+      background: var(--maroon);
+      border: none;
+      border-radius: 4px;
+      padding: 8px 16px;
+      cursor: pointer;
+    }
+    .print-bar button:hover { background: var(--navy); }
+
+    @media print {
+      body { background: var(--white); padding: 0; }
+      .print-bar { display: none; }
+      .sheet { border: none; padding: 0; max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="print-bar">
+    <button onclick="window.print()">🖨 Print this form</button>
+  </div>
+
+  <div class="sheet">
+    <header>
+      <img src="logo.jpg" alt="Westborough Community Center Foundation" />
+    </header>
+
+    <h1>Donation &amp; Pledge Form</h1>
+    <div class="dateline"><script>document.write(new Date().getFullYear())</script></div>
+
+    <p class="quote">"Yes! I'm proud to invest in a stronger Westborough — supporting families, older adults, veterans, and a more connected community."</p>
+
+    <p class="mail-to">
+      Please print, complete, and mail this form with your check to:<br />
+      <strong>Westborough Community Center Foundation</strong><br />
+      P.O. Box 72, Westborough, MA 01581
+    </p>
+
+    <h2>My Gift Amount</h2>
+    <div class="amount-row">
+      <span>☐ $50</span><span>☐ $100</span><span>☐ $150</span><span>☐ $250</span><span>☐ $500</span><span>☐ Other $__________</span>
+    </div>
+
+    <h2>Your Information</h2>
+    <div class="field-line">Name:<span class="blank"></span></div>
+    <div class="field-line">Address:<span class="blank"></span></div>
+    <div class="field-line">&nbsp;<span class="blank" style="min-width: 320px;"></span></div>
+    <div class="field-line">Phone:<span class="blank"></span></div>
+    <div class="field-line">Email:<span class="blank"></span></div>
+
+    <p class="thanks">Thank you kindly for your support!</p>
+
+    <p class="fine-print">
+      Westborough Community Center Foundation (WCCF) is a 501(c)(3) organization.<br />
+      Donations are tax deductible under IRS regulations.<br />
+      WestboroughCommunityCenterFoundation.org &nbsp;|&nbsp; info@westboroughcommunitycenterfoundation.org
+    </p>
+  </div>
+
+</body>
+</html>
