@@ -12,6 +12,7 @@
       --navy:   #1B3A6B;
       --maroon: #7A1F31;
       --gold:   #C8993A;
+      --bgold:  #F5B928;
       --light:  #F5F7FA;
       --white:  #FFFFFF;
       --text:   #2D2D2D;
@@ -32,13 +33,13 @@
     header {
       background: var(--white);
       border-bottom: 3px solid var(--maroon);
-      padding: 20px 40px;
+      padding: 24px 40px;
       display: flex;
       align-items: center;
       justify-content: center;
     }
     header img {
-      max-width: 260px;
+      max-width: 420px;
       height: auto;
     }
 
@@ -58,32 +59,11 @@
       font-size: 0.88rem;
       letter-spacing: 0.05em;
       text-transform: uppercase;
-      transition: background 0.2s;
+      transition: background 0.2s, color 0.2s;
     }
     nav a:hover { background: var(--maroon); color: var(--white); }
-
-    /* ── HERO ── */
-    .hero {
-      background: linear-gradient(135deg, var(--navy) 0%, #24527a 100%);
-      color: var(--white);
-      text-align: center;
-      padding: 64px 40px;
-    }
-    .hero h1 {
-      font-size: 2.1rem;
-      font-weight: normal;
-      letter-spacing: 0.02em;
-      max-width: 800px;
-      margin: 0 auto 20px;
-      line-height: 1.35;
-    }
-    .hero p {
-      font-size: 1.1rem;
-      opacity: 0.9;
-      max-width: 640px;
-      margin: 0 auto;
-      font-family: Arial, sans-serif;
-    }
+    nav a.nav-donate { color: var(--bgold); font-weight: bold; }
+    nav a.nav-donate:hover { background: var(--bgold); color: var(--navy); }
 
     /* ── SECTION WRAPPER ── */
     section { padding: 60px 40px; }
@@ -106,36 +86,6 @@
       letter-spacing: 0.06em;
     }
     p { margin-bottom: 16px; }
-
-    /* ── GOALS LIST ── */
-    .goals-list {
-      list-style: none;
-      margin-top: 24px;
-      display: grid;
-      gap: 14px;
-    }
-    .goals-list li {
-      background: var(--white);
-      border-left: 4px solid var(--maroon);
-      border-radius: 4px;
-      padding: 16px 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-      font-family: Arial, sans-serif;
-      font-size: 0.95rem;
-    }
-    .goals-list li strong { color: var(--navy); }
-
-    /* ── LEADERSHIP STRIP ── */
-    .leadership-strip {
-      text-align: center;
-      font-family: Arial, sans-serif;
-      font-size: 0.92rem;
-      color: var(--muted);
-      margin-top: 32px;
-      padding-top: 24px;
-      border-top: 1px solid #dde2ea;
-    }
-    .leadership-strip strong { color: var(--navy); display: block; margin-bottom: 4px; font-size: 1rem;}
 
     /* ── HOW GIFT HELPS ── */
     .helps-list {
@@ -186,164 +136,133 @@
     }
     .donate-cta a.big-donate {
       display: inline-block;
-      background: linear-gradient(135deg, #e0b563 0%, var(--gold) 100%);
+      background: linear-gradient(135deg, #ffce4d 0%, var(--bgold) 100%);
       color: var(--navy);
       font-family: Arial, sans-serif;
       font-weight: bold;
-      font-size: 1.15rem;
+      font-size: 1.3rem;
       letter-spacing: 0.02em;
       padding: 18px 56px;
       border-radius: 16px;
       text-decoration: none;
-      box-shadow: 0 4px 14px rgba(200,153,58,0.4);
+      box-shadow: 0 4px 14px rgba(245,185,40,0.5);
       transition: transform 0.15s, box-shadow 0.15s;
     }
     .donate-cta a.big-donate:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 18px rgba(200,153,58,0.5);
-    }
-    .donate-cta .methods-note {
-      font-family: Arial, sans-serif;
-      font-size: 0.85rem;
-      color: var(--muted);
-      margin-top: 10px;
+      box-shadow: 0 6px 18px rgba(245,185,40,0.6);
     }
 
     /* ── STACKED PAYMENT BUTTONS ── */
     .donate-stack {
-      max-width: 460px;
+      max-width: 480px;
       margin: 32px auto 0;
       display: grid;
-      gap: 14px;
+      gap: 16px;
     }
     .pill-btn {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
+      gap: 12px;
       width: 100%;
-      padding: 15px 20px;
+      padding: 20px 24px;
       border-radius: 50px;
       font-family: Arial, sans-serif;
       font-weight: bold;
-      font-size: 1rem;
+      font-size: 1.3rem;
       text-decoration: none;
       letter-spacing: 0.01em;
+      background: var(--bgold);
     }
-    .pill-btn .mark { font-weight: 900; font-size: 1.1rem; }
-    .pill-paypal {
-      background: var(--gold);
-      color: var(--navy);
-    }
-    .pill-paypal:hover { background: #b6872f; color: var(--navy); }
-    .pill-venmo {
-      background: #3D95CE;
-      color: var(--white);
-    }
-    .pill-venmo:hover { background: #2f7cae; color: var(--white); }
+    .pill-btn .mark { font-weight: 900; font-size: 1.3rem; }
+    .pill-paypal { color: #0070BA; }
+    .pill-paypal:hover { background: #e0a91a; color: #0070BA; }
+    .pill-venmo { color: #008CFF; }
+    .pill-venmo:hover { background: #e0a91a; color: #008CFF; }
     .pill-venmo .mark { font-style: italic; }
-    .pill-applepay {
-      background: var(--white);
-      color: var(--navy);
-      border: 2px solid var(--navy);
-    }
-    .pill-applepay:hover { background: var(--light); color: var(--navy); }
 
     /* ── BY MAIL CARD ── */
     .mail-card {
-      max-width: 340px;
-      margin: 36px auto 0;
+      max-width: 460px;
+      margin: 40px auto 0;
       border: 1px solid #dde2ea;
-      border-radius: 8px;
-      padding: 26px 22px;
+      border-radius: 10px;
+      padding: 36px 32px;
       text-align: center;
       background: var(--white);
     }
-    .mail-card .icon { font-size: 1.8rem; margin-bottom: 8px; }
+    .mail-card .icon { font-size: 2.2rem; margin-bottom: 10px; }
     .mail-card h4 {
       font-family: Arial, sans-serif;
-      font-size: 0.95rem;
+      font-size: 1.05rem;
       color: var(--navy);
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       text-transform: uppercase;
       letter-spacing: 0.05em;
     }
     .mail-card p {
       font-family: Arial, sans-serif;
-      font-size: 0.88rem;
+      font-size: 0.95rem;
       color: var(--muted);
       margin-bottom: 4px;
     }
     .mail-card a.cta {
       display: inline-block;
-      margin-top: 14px;
+      margin-top: 18px;
       background: var(--maroon);
       color: var(--white);
       font-family: Arial, sans-serif;
-      font-size: 0.85rem;
+      font-size: 0.92rem;
       font-weight: bold;
-      padding: 10px 22px;
+      padding: 12px 26px;
       border-radius: 4px;
       text-decoration: none;
       letter-spacing: 0.03em;
     }
     .mail-card a.cta:hover { background: var(--navy); }
 
-    /* ── NEWS GRID ── */
+    /* ── NEWS DOC CARDS ── */
     .news-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
       margin-top: 28px;
     }
-    .news-grid figure {
+    .doc-card {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
       background: var(--white);
       border: 1px solid #dde2ea;
-      border-radius: 6px;
-      overflow: hidden;
-      margin: 0;
-    }
-    .news-grid a.news-link {
-      display: block;
+      border-radius: 8px;
+      padding: 20px;
       text-decoration: none;
       color: inherit;
       transition: box-shadow 0.15s;
     }
-    .news-grid a.news-link:hover {
-      box-shadow: 0 4px 14px rgba(27,58,107,0.15);
+    .doc-card:hover { box-shadow: 0 4px 14px rgba(27,58,107,0.15); }
+    .doc-icon { font-size: 1.8rem; flex-shrink: 0; }
+    .doc-body h4 {
+      font-family: Arial, sans-serif;
+      font-size: 0.95rem;
+      color: var(--navy);
+      margin-bottom: 4px;
+      line-height: 1.35;
     }
-    .news-grid img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-bottom: 1px solid #dde2ea;
-    }
-    .news-grid figcaption {
+    .doc-body p {
       font-family: Arial, sans-serif;
       font-size: 0.8rem;
       color: var(--muted);
-      padding: 10px 12px;
+      margin-bottom: 8px;
     }
-    .news-grid .pdf-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
+    .doc-tag {
       font-family: Arial, sans-serif;
       font-size: 0.72rem;
       font-weight: bold;
       color: var(--maroon);
       text-transform: uppercase;
       letter-spacing: 0.04em;
-      padding: 0 12px 10px;
-    }
-
-    /* ── PEOPLE PLACEHOLDER ── */
-    .people-note {
-      font-family: Arial, sans-serif;
-      font-size: 0.95rem;
-      color: var(--muted);
-      font-style: italic;
-      margin-top: 8px;
     }
 
     /* ── BOARD BIOS ── */
@@ -382,21 +301,6 @@
       margin: 0;
     }
 
-    /* ── CTA STRIP ── */
-    .cta-strip {
-      text-align: center;
-      margin-top: 24px;
-    }
-    .cta-strip a {
-      font-family: Arial, sans-serif;
-      font-weight: bold;
-      color: var(--navy);
-      text-decoration: none;
-      border-bottom: 2px solid var(--gold);
-      padding-bottom: 2px;
-    }
-    .cta-strip a:hover { color: var(--maroon); }
-
     /* ── FOOTER ── */
     footer {
       background: var(--navy);
@@ -413,8 +317,7 @@
     /* ── RESPONSIVE ── */
     @media (max-width: 600px) {
       header { padding: 18px; }
-      header img { max-width: 200px; }
-      .hero h1 { font-size: 1.4rem; }
+      header img { max-width: 280px; }
       section { padding: 44px 22px; }
       .bio-card { flex-direction: column; align-items: center; text-align: center; }
     }
@@ -430,56 +333,29 @@
 <!-- NAV -->
 <nav>
   <a href="#mission">Mission</a>
-  <a href="#goals">Our Goals</a>
-  <a href="#donate">Donate</a>
-  <a href="#news">News</a>
-  <a href="#about">About Us</a>
+  <a href="#donate" class="nav-donate">Donate</a>
   <a href="#board">Board</a>
+  <a href="#about">About</a>
+  <a href="#news">News</a>
   <a href="#contact">Contact</a>
 </nav>
-
-<!-- HERO -->
-<div class="hero">
-  <h1>Westborough Community Center Foundation Mission &amp; Goals</h1>
-  <p>WCCF's mission is to fund the renovation and future of Westborough's Community Center — a hub for connection, learning, and wellness for all ages.</p>
-</div>
 
 <!-- MISSION -->
 <section id="mission">
   <div class="inner">
-    <h2>Our Mission</h2>
-    <p>The Westborough Community Center Foundation (WCCF) raises awareness and financial support to renovate and sustain the Westborough Community Center — transforming it into a vibrant, inclusive, intergenerational hub where people of all ages connect, learn, and thrive for generations to come.</p>
-
-    <div class="leadership-strip">
-      <strong>Westborough Community Center Foundation</strong>
-      Evilee Ebb, Mirtha Leslie, Co-Presidents<br />
-      Sara Dullea, Secretary &nbsp;|&nbsp; Dee Angelakis, Treasurer &nbsp;|&nbsp; Maureen Johnson, Director<br />
-      <a href="mailto:info@westboroughcommunitycenterfoundation.org">info@westboroughcommunitycenterfoundation.org</a>
-    </div>
-  </div>
-</section>
-
-<!-- GOALS -->
-<section id="goals">
-  <div class="inner">
-    <h2>Our Goals</h2>
-    <ul class="goals-list">
-      <li><strong>Renovate and modernize</strong> — Secure funding to renovate, enhance, and maintain the Westborough Community Center, ensuring a modern, accessible, and welcoming facility for all residents.</li>
-      <li><strong>Build long-term capital strength</strong> — Support the Center's financial stability, future needs, and ongoing improvements.</li>
-      <li><strong>Invest in community programs</strong> — Fund educational, recreational, wellness, and social service offerings that enrich community life.</li>
-      <li><strong>Strengthen local partnerships</strong> — Collaborate with local organizations to broaden reach, deepen engagement, and amplify impact across Westborough, MA.</li>
-    </ul>
+    <h2>Westborough Community Center Foundation Mission</h2>
+    <p>The Westborough Community Center Foundation (WCCF, a 501(c)(3) nonprofit) raises awareness and financial support to renovate and sustain the Westborough Community Center — transforming it into a vibrant, inclusive, intergenerational hub where people of all ages connect, learn, and thrive for generations to come.</p>
   </div>
 </section>
 
 <!-- DONATE -->
 <section id="donate">
   <div class="inner">
-    <h2>Donate to the Westborough Community Center Foundation (WCCF)</h2>
+    <h2>Donate to the Westborough Community Center Foundation</h2>
     <p style="font-family: Arial, sans-serif; color: var(--muted); font-size: 0.92rem; margin-top: -8px;">Support Westborough's new Community Center including the Active-Living Senior Center with a tax-deductible donation today.</p>
 
     <h3>Why Your Support Matters</h3>
-    <p>The Westborough Community Center Foundation (WCCF) is building a new Community Center for Westborough, MA — a modern, welcoming space where residents of all ages can learn, connect, and thrive. Every gift helps create a healthier, more vibrant Westborough for today and for generations to come.</p>
+    <p>The Westborough Community Center Foundation (WCCF) will help raise funds for the new Community Center in Westborough MA — a modern, welcoming intergenerational space where residents of all ages can learn, connect and thrive. Every gift helps create a healthier, more vibrant Westborough for today and generations to come.</p>
 
     <h3>About WCCF</h3>
     <p>WCCF is a 501(c)(3) nonprofit organization created by community leaders to raise capital funds for Westborough's new Community Center, featuring an Active-Living Senior Center, recreation area, and pool in a renovated Town building. WCCF is independent from the Town — donations supplement, and never replace, Town-funded programs and services.</p>
@@ -487,7 +363,7 @@
     <h3>How Your Gift Helps</h3>
     <ul class="helps-list">
       <li>Funds design, construction, and long-term capital needs of the new Community Center</li>
-      <li>Supports programs and amenities for Westborough seniors and families</li>
+      <li>Supports programs and amenities for Westborough older adults and families</li>
       <li>Creates a welcoming space for recreational, social, and educational activities for all ages</li>
     </ul>
 
@@ -504,67 +380,21 @@
     <h3>Make a Tax-Deductible Donation</h3>
     <p>Every contribution — large or small — brings Westborough's new Community Center closer to reality. Click the donate button below to give today.</p>
 
+    <div class="donate-cta">
+      <a class="big-donate" href="https://paypal.me/WestboroughCommunityCenterFoundation" target="_blank" rel="noopener">Donate Now</a>
+    </div>
+
     <div class="donate-stack">
-      <a class="pill-btn pill-paypal" href="https://www.paypal.com/donate/?hosted_button_id=REPLACE_WITH_BUTTON_ID" target="_blank" rel="noopener"><span class="mark">P</span> Donate with PayPal</a>
-      <a class="pill-btn pill-venmo" href="https://venmo.com/WCCF-Westborough" target="_blank" rel="noopener"><span class="mark">venmo</span> Donate</a>
-      <a class="pill-btn pill-applepay" href="https://www.paypal.com/donate/?hosted_button_id=REPLACE_WITH_BUTTON_ID" target="_blank" rel="noopener"><span class="mark">🍎</span> Donate with Apple Pay</a>
+      <a class="pill-btn pill-paypal" href="https://paypal.me/WestboroughCommunityCenterFoundation" target="_blank" rel="noopener"><span class="mark">P</span> Donate with PayPal</a>
+      <a class="pill-btn pill-venmo" href="https://venmo.com/WESTBOROUGHCCF" target="_blank" rel="noopener"><span class="mark">venmo</span> Donate with Venmo</a>
     </div>
 
     <div class="mail-card">
       <div class="icon">✉️</div>
       <h4>By Mail</h4>
       <p>Make checks payable to:<br /><strong>Westborough Community Center Foundation</strong></p>
-      <p>P.O. Box 72<br />Westborough, MA 01581</p>
+      <p>P.O. Box 72<br />Westborough, MA 01752</p>
       <a class="cta" href="pledge-form.html" target="_blank" rel="noopener">⬇ Download Pledge Form</a>
-    </div>
-  </div>
-</section>
-
-<!-- NEWS -->
-<section id="news">
-  <div class="inner">
-    <h2>WCCF News to Know</h2>
-    <p>Stay up to date on the latest developments for Westborough's Community Center including the Active-Living Senior Center phase.</p>
-    <div class="news-grid">
-      <figure>
-        <a class="news-link" href="news-pdfs/news-town-update.pdf" target="_blank" rel="noopener">
-          <img src="news1.jpg" alt="Town of Westborough Community Center Project update" />
-          <figcaption>Town of Westborough — Community Center Project update.</figcaption>
-          <span class="pdf-tag">📄 View PDF</span>
-        </a>
-      </figure>
-      <figure>
-        <a class="news-link" href="news-pdfs/news-architectural-services.pdf" target="_blank" rel="noopener">
-          <img src="news2.jpg" alt="Town progress on architectural services and community engagement" />
-          <figcaption>Progress on additional architectural services and community engagement sessions.</figcaption>
-          <span class="pdf-tag">📄 View PDF</span>
-        </a>
-      </figure>
-      <figure>
-        <a class="news-link" href="news-pdfs/news-select-board-decision.pdf" target="_blank" rel="noopener">
-          <img src="news3.jpg" alt="Select Board decision on Community Center funding and planning" />
-          <figcaption>Select Board decision on funding, planning, and potential affordable housing or senior support within the building.</figcaption>
-          <span class="pdf-tag">📄 View PDF</span>
-        </a>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about">
-  <div class="inner">
-    <h2>About the Westborough Community Center Foundation</h2>
-    <p>The Westborough Community Center Foundation (WCCF) is a 501(c)(3) nonprofit dedicated to keeping the Westborough Community Center strong, modern, and welcoming for everyone. We raise the resources needed to renovate and sustain the facility, support essential programs, and ensure this vital gathering place continues to serve Westborough, MA for generations.</p>
-
-    <h3>Our Mission</h3>
-    <p>The Westborough Community Center Foundation (WCCF) raises awareness and financial support to renovate and sustain the Westborough Community Center — transforming it into a vibrant, inclusive, intergenerational hub where people of all ages connect, learn, and thrive for generations to come.</p>
-
-    <h3>Why It Matters</h3>
-    <p>A strong Community Center strengthens the entire town. It's where people come together — to learn, stay active, find support, and feel connected. Your generosity keeps this shared space thriving, ensuring Westborough remains a welcoming, healthy, and engaged community for everyone, now and for generations to come.</p>
-
-    <div class="cta-strip">
-      <a href="#donate">Ready to help? Support the Community Center and help build a stronger Westborough for generations to come →</a>
     </div>
   </div>
 </section>
@@ -619,26 +449,85 @@
   </div>
 </section>
 
+<!-- ABOUT -->
+<section id="about">
+  <div class="inner">
+    <h2>About the Westborough Community Center Foundation</h2>
+    <p>The Westborough Community Center Foundation (WCCF) is a 501(c)(3) nonprofit dedicated to keeping the Westborough Community Center strong, modern, and welcoming for everyone. We hope to raise some of the resources needed to renovate and sustain the facility, support essential programs, and ensure this vital gathering place continues to serve Westborough, MA for generations.</p>
+
+    <h3>Our Mission</h3>
+    <p>The Westborough Community Center Foundation (WCCF) raises awareness and financial support to renovate and sustain the Westborough Community Center — transforming it into a vibrant, inclusive, intergenerational hub where people of all ages connect, learn, and thrive for generations to come.</p>
+
+    <h3>Why It Matters</h3>
+    <p>A strong Community Center strengthens the entire town. It's where people come together — to learn, stay active, find support, and feel connected. Your generosity keeps this shared space thriving, ensuring Westborough remains a welcoming, healthy, and engaged community for everyone, now and for generations to come.</p>
+  </div>
+</section>
+
+<!-- NEWS -->
+<section id="news">
+  <div class="inner">
+    <h2>WCCF News to Know</h2>
+    <p>Stay up to date on the latest developments for Westborough's Community Center including the Active-Living Senior Center phase.</p>
+    <div class="news-grid">
+      <a class="doc-card" href="https://westboroughma.gov/DocumentCenter/View/6890/July-7-2026---Community-Center-Edition-Community-Engagement" target="_blank" rel="noopener">
+        <div class="doc-icon">📄</div>
+        <div class="doc-body">
+          <h4>Community Center Edition — Community Engagement</h4>
+          <p>July 7, 2026 · Town of Westborough</p>
+          <span class="doc-tag">View Document ↗</span>
+        </div>
+      </a>
+      <a class="doc-card" href="https://westboroughma.gov/DocumentCenter/View/6864/Community-Center-Update" target="_blank" rel="noopener">
+        <div class="doc-icon">📄</div>
+        <div class="doc-body">
+          <h4>Community Center Update</h4>
+          <p>Town of Westborough</p>
+          <span class="doc-tag">View Document ↗</span>
+        </div>
+      </a>
+      <a class="doc-card" href="https://westboroughma.gov/DocumentCenter/View/6864/Community-Center-Update" target="_blank" rel="noopener">
+        <div class="doc-icon">📄</div>
+        <div class="doc-body">
+          <h4>Community Center Update</h4>
+          <p>Town of Westborough</p>
+          <span class="doc-tag">View Document ↗</span>
+        </div>
+      </a>
+      <a class="doc-card" href="news-pdfs/wccf-community-center-facts.pdf" target="_blank" rel="noopener">
+        <div class="doc-icon">📄</div>
+        <div class="doc-body">
+          <h4>Community Facts: 1500 Union St.</h4>
+          <p>Verified information from WCCF</p>
+          <span class="doc-tag">View PDF</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section id="contact">
   <div class="inner">
     <h2>Contact Us</h2>
     <p>Interested in learning more, volunteering, or discussing major gift opportunities? We'd love to hear from you.</p>
     <p>
-      <strong>Westborough Community Center Foundation</strong><br />
-      Evilee Ebb, Mirtha Leslie, Co-Presidents<br />
+      <strong>Westborough Community Center Foundation (WCCF)</strong><br />
+      P.O. Box 72, Westborough, MA 01752<br /><br />
+      Evilee Ebb, Co-President &nbsp;|&nbsp; Mirtha Leslie, Co-President<br />
       Sara Dullea, Secretary &nbsp;|&nbsp; Dee Angelakis, Treasurer &nbsp;|&nbsp; Maureen Johnson, Director<br />
-      <a href="mailto:info@westboroughcommunitycenterfoundation.org">info@westboroughcommunitycenterfoundation.org</a><br />
-      P.O. Box 72, Westborough, MA 01581
+      <a href="https://westboroughcommunitycenterfoundation.org">Westboroughcommunitycenterfoundation.org</a><br />
+      <a href="mailto:Info@westboroughcommunitycenterfoundation.org">Info@westboroughcommunitycenterfoundation.org</a><br />
+      <a href="https://www.facebook.com/groups/1130028732597403/" target="_blank" rel="noopener">Follow us on Facebook</a><br /><br />
+      The Westborough Community Center Foundation (WCCF) is a 501(c)(3) nonprofit organization.<br />
+      Donations are tax deductible under IRS regulations.
     </p>
-    <p><a href="https://www.facebook.com" target="_blank" rel="noopener">Follow us on Facebook</a></p>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
   <p><strong>Westborough Community Center Foundation</strong></p>
-  <p>P.O. Box 72 · Westborough, MA 01581</p>
+  <p>P.O. Box 72 · Westborough, MA 01752</p>
   <p>The Westborough Community Center Foundation (WCCF) is a 501(c)(3) organization.<br />
   Donations are tax deductible under IRS regulations.</p>
   <p style="margin-top:8px;"><a href="https://www.westboroughcommunitycenterfoundation.org">WestboroughCommunityCenterFoundation.org</a> &nbsp;|&nbsp; <a href="mailto:info@westboroughcommunitycenterfoundation.org">info@westboroughcommunitycenterfoundation.org</a></p>
