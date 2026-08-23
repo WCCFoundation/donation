@@ -103,12 +103,13 @@
       font-family: Arial, sans-serif;
       font-size: 0.92rem;
       margin-bottom: 18px;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
     }
     .field-line .blank {
-      display: inline-block;
+      flex: 1;
       border-bottom: 1px solid var(--muted);
-      min-width: 260px;
-      margin-left: 8px;
     }
 
     .thanks {
@@ -165,7 +166,6 @@
     </header>
 
     <h1>Donation &amp; Pledge Form</h1>
-    <div class="dateline"><script>document.write(new Date().getFullYear())</script></div>
 
     <p class="quote">"Yes! I'm proud to invest in a stronger Westborough — supporting families, older adults, veterans, and a more connected community."</p>
 
@@ -179,11 +179,11 @@
     <div class="amount-row">
       <span>☐ $50</span><span>☐ $100</span><span>☐ $150</span><span>☐ $250</span><span>☐ $500</span><span>☐ Other $__________</span>
     </div>
+    <p style="font-family: Arial, sans-serif; font-size: 0.92rem; margin-top: 10px;">☐ If your employer matches gifts — thank you for including your matching gift form</p>
 
     <h2>Your Information</h2>
     <div class="field-line">Name:<span class="blank"></span></div>
     <div class="field-line">Address:<span class="blank"></span></div>
-    <div class="field-line">&nbsp;<span class="blank" style="min-width: 320px;"></span></div>
     <div class="field-line">Phone:<span class="blank"></span></div>
     <div class="field-line">Email:<span class="blank"></span></div>
 
